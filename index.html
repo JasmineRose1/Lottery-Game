@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lottery Game</title>
+</head>
+<body>
+
+  <input id="num1" class="bettingNumbers" type="number" max="50" min="1">
+  <input id="num2" class="bettingNumbers" type="number" max="50" min="1">
+  <input id="num3" class="bettingNumbers" type="number" max="50" min="1">
+  <button id="bet">Play to Win!</button>
+  <h6></h6>
+
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+
+{
+document.getElementById("bet").addEventListener('click', function(){
+//  $("button").on('click', function(){
+  var numberOne = document.getElementById("num1").value;
+  var numberTwo = document.getElementById("num2").value;
+  var numberThree=document.getElementById("num3").value;
+  var winningNumber = Math.floor((Math.random() * (50) + 1)); // conditional statement to match the betting numbers to the randomized computer number
+
+  if(winningNumber==numberOne||winningNumber==numberTwo||winningNumber==numberThree){
+   console.log("you win");
+  }
+
+   else{
+     console.log("You lose");
+   }
+    console.log(winningNumber)
+
+})
+
+
+}
+})
+  </script>
+</body>
+</html>
